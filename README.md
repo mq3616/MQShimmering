@@ -10,7 +10,7 @@
 	shimmeringView.shimmeringLength = 200
 	shimmeringView.isShimmering = true
 	view.addSubview(shimmeringView)
- 
+
 	let contentLabel = UILabel(frame: shimmeringView.bounds)
 	contentLabel.font = UIFont.systemFont(ofSize: 30)
 	contentLabel.text = "hello world"
