@@ -12,6 +12,10 @@ class MQShimmeringLayer: CALayer, MQShimmering, CAAnimationDelegate {
   
   var isShimmering: Bool = false {
     didSet {
+      guard maskLayer != nil else {
+        return
+      }
+      
       if isShimmering != oldValue {
         if isShimmering {
           updateShimmeringInfo()
@@ -62,6 +66,10 @@ class MQShimmeringLayer: CALayer, MQShimmering, CAAnimationDelegate {
   
   func setMaskLayer(_ layer: CALayer) {
     maskLayer = layer
+    
+    if isShimmering {
+      updateShimmeringInfo()
+    }
   }
   
   func clearMask() {
