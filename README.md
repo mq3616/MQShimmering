@@ -1,6 +1,6 @@
 # MQShimmering
 
-##仿Facebook shimmering效果, 支持角度倾斜, 颜色渐变, 图片
+仿Facebook shimmering效果, 支持角度倾斜, 颜色渐变, 图片
 
 
 	let shimmeringView = MQShimmeringView(frame: CGRect(x: 100, y: 150, width: 200, height: 50))
