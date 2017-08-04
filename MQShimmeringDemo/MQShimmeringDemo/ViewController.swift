@@ -16,7 +16,7 @@ class ViewController: UIViewController {
     view.backgroundColor = UIColor.black
     
     let shimmeringView = MQShimmeringView(frame: CGRect(x: 100, y: 150, width: 200, height: 50))
-    shimmeringView.shimmeringColorArray = [UIColor.white.withAlphaComponent(0.1), UIColor.white.withAlphaComponent(1), UIColor.white.withAlphaComponent(0.1)]
+    shimmeringView.shimmeringColorArray = [UIColor.white]
     shimmeringView.shimmeringTextColor = UIColor.blue
     shimmeringView.shimmeringRotationAngle = 20.0
     shimmeringView.shimmeringLength = 200
@@ -29,7 +29,9 @@ class ViewController: UIViewController {
     shimmeringView.isShimmering = true
     
     let shimmeringView2 = MQShimmeringView(frame: CGRect(x: 100, y: 250, width: 200, height: 50))
-    shimmeringView2.shimmeringColorArray = [UIColor.yellow, UIColor.white, UIColor.green]
+    shimmeringView2.shimmeringColorArray = [UIColor.yellow,
+                                            UIColor.white,
+                                            UIColor.green]
     shimmeringView2.shimmeringTextColor = UIColor.red
     shimmeringView2.shimmeringRotationAngle = 30.0
     view.addSubview(shimmeringView2)

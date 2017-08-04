@@ -163,6 +163,7 @@ private class MQGradientLayer: CAGradientLayer {
   
   init(length: CGFloat, contentViewHeight: CGFloat, rotationAngle: Double) {
     super.init()
+    
     frame = CGRect(x: 0, y: 0, width: CGFloat(cos(rotationAngle)) * length, height: CGFloat(sin(rotationAngle)) * length + contentViewHeight / CGFloat(cos(rotationAngle)))
     transform = CATransform3DMakeRotation(CGFloat(rotationAngle), 0, 0, 1)
     position = CGPoint(x: 0, y: contentViewHeight / 2)
