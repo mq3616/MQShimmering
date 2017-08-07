@@ -6,7 +6,9 @@
 
 
 	let shimmeringView = MQShimmeringView(frame: CGRect(x: 100, y: 150, width: 200, height: 50))
-	shimmeringView.shimmeringColorArray = [UIColor.white.withAlphaComponent(0.1), UIColor.white.withAlphaComponent(1), UIColor.white.withAlphaComponent(0.1)]
+	shimmeringView.shimmeringColorArray = [UIColor.white.withAlphaComponent(0.1),
+										   UIColor.white.withAlphaComponent(1), 
+	 									   UIColor.white.withAlphaComponent(0.1)]
 	shimmeringView.shimmeringTextColor = UIColor.blue
 	shimmeringView.shimmeringRotationAngle = 20.0
 	shimmeringView.shimmeringLength = 200
