@@ -85,12 +85,23 @@ class MQShimmeringView: UIView, MQShimmering {
   
   override init(frame: CGRect) {
     super.init(frame: frame)
+    
+    NotificationCenter.default.addObserver(self, selector: #selector(applicationWillEnterForeground), name: NSNotification.Name.UIApplicationWillEnterForeground, object: nil)
+    NotificationCenter.default.addObserver(self, selector: #selector(applicationDidEnterBackground), name: NSNotification.Name.UIApplicationDidEnterBackground, object: nil)
   }
   
   func setContentView(_ contentLabel: UIView) {
     self.contentLabel = contentLabel
     addSubview(contentLabel)
     (layer as! MQShimmeringLayer).setMaskLayer(contentLabel.layer)
+  }
+  
+  @objc private func applicationWillEnterForeground() {
+    isShimmering = true
+  }
+  
+  @objc private func applicationDidEnterBackground() {
+    isShimmering = false
   }
   
   override func layoutSubviews() {

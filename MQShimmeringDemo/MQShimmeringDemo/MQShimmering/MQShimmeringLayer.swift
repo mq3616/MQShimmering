@@ -74,7 +74,6 @@ class MQShimmeringLayer: CALayer, MQShimmering, CAAnimationDelegate {
   
   func clearMask() {
     removeAllAnimations()
-    maskLayer = nil
     sublayers = nil
   }
 
