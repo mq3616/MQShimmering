@@ -108,6 +108,10 @@ class MQShimmeringView: UIView, MQShimmering {
     super.layoutSubviews()
     contentLabel.center = CGPoint(x: frame.width / 2, y: frame.height / 2)
   }
+  
+  deinit {
+    NotificationCenter.default.removeObserver(self)
+  }
 
   required init?(coder aDecoder: NSCoder) {
     fatalError("init(coder:) has not been implemented")
